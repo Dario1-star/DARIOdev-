@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site de DARIOdev - Développement web full stack et services pour les entrepreneurs">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <title>Dariodev</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: black;
+      color: white;
+    }
+
+    header {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: white;
+      color: black;
+      padding: 10px 20px;
+      border: 2px solid green;
+      border-radius: 20px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 100px 20px 40px;
+      text-align: center;
+    }
+
+    .intro p {
+      background: white;
+      color: black;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 700px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .intro button {
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #services {
+      padding: 60px 20px;
+      background-color: #000;
+      text-align: center;
+    }
+
+    #services h2 {
+      color: green;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .service-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .service {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 20px;
+      width: 250px;
+      height: 150px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    footer {
+      background-color: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      border-top: 1px solid #333;
+    }
+
+    /* Ajout des media queries pour la responsivité */
+    @media (max-width: 768px) {
+      .service-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .service {
+        width: 80%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .intro p {
+        font-size: 14px;
+      }
+
+      .intro button {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+
+      #services h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Dariodev</header>
+
+  <section class="intro">
+    <p>Je suis <strong>DARIO</strong>, développeur web full stack senior. J'ai créé ce site pour aider les personnes qui n'ont pas les moyens ou la motivation de suivre un cours d'informatique, parce que je comprends totalement ce que vous ressentez. La vie m'a beaucoup appris, et aujourd'hui, je vous donne l'opportunité de vivre vos rêves à fond. Bonne chance et succès ! N'oublie pas : nous sommes des gagnants.</p>
+    <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })">Voir mes services</button>
+  </section>
+
+  <section id="services">
+    <h2>Mes Services</h2>
+    <div class="service-container">
+      <div class="service">
+        <h3>Maintenance & support</h3>
+      </div>
+      <div class="service">
+        <h3>SEO & visibilité</h3>
+      </div>
+      <div class="service">
+        <h3>Développement web</h3>
+      </div>
+    </div>
+  </section>
+  <section id="about" style="padding: 60px 20px; background-color: #000; color: white;">
+    <h2 style="text-align: center; color: green; margin-bottom: 30px;">À propos de moi</h2>
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <img src="S.jpa" alt="Photo de Dario"
+           style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid green; margin-bottom: 20px;">
+      <p style="font-size: 16px; line-height: 1.6;">
+        Je suis <strong>DARIO</strong>, développeur web full stack passionné par la création de solutions modernes,
+        efficaces et inspirantes. J'ai appris le développement en autodidacte, en surmontant les obstacles
+        et en transformant les défis en opportunités.
+      </p>
+      <p style="font-size: 16px; line-height: 1.6;">
+        Mon objectif est simple : utiliser mes compétences pour aider ceux qui, comme moi, veulent réussir dans le numérique
+        sans forcément avoir les moyens traditionnels. Je crois au pouvoir de l’apprentissage, de la persévérance,
+        et surtout à notre capacité à transformer nos rêves en réalité.
+      </p>
+    </div>
+  </section>
+  <section id="portfolio" style="padding: 60px 20px; background-color: #000;">
+    <h2 style="text-align: center; color: green; margin-bottom: 30px;">Mes Projets</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+      <div style="background-color: #1e1e1e; padding: 20px; border-radius: 12px; width: 300px; text-align: center;">
+        <img src="S.jpf" alt="Projet 1" style="width: 100%; border-radius: 8px;">
+        <h3 style="color: white; margin-top: 15px;">Nom du Projet</h3>
+        <p style="color: #ccc;">Un projet de site web moderne avec HTML, CSS et JavaScript.</p>
+      </div>
+      <div style="background-color: #1e1e1e; padding: 20px; border-radius: 12px; width: 300px; text-align: center;">
+        <img src="S.jpg" alt="Projet 2" style="width: 100%; border-radius: 8px;"><!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site de DARIOdev - Développement web full stack et services pour les entrepreneurs">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <title>Dariodev</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: black;
+      color: white;
+    }
+
+    header {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: white;
+      color: black;
+      padding: 10px 20px;
+      border: 2px solid green;
+      border-radius: 20px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 100px 20px 40px;
+      text-align: center;
+    }
+
+    .intro p {
+      background: white;
+      color: black;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 700px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .intro button {
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #services {
+      padding: 60px 20px;
+      background-color: #000;
+      text-align: center;
+    }
+
+    #services h2 {
+      color: green;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .service-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .service {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 20px;
+      width: 250px;
+      height: 150px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    footer {
+      background-color: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      border-top: 1px solid #333;
+    }
+
+    /* Ajout des media queries pour la responsivité */
+    @media (max-width: 768px) {
+      .service-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .service {
+        width: 80%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .intro p {
+        font-size: 14px;
+      }
+
+      .intro button {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+
+      #services h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Dariodev</header>
+
+  <section class="intro">
+    <p>Je suis <strong>DARIO</strong>, développeur web full stack senior. J'ai créé ce site pour aider les personnes qui n'ont pas les moyens ou la motivation de suivre un cours d'informatique, parce que je comprends totalement ce que vous ressentez. La vie m'a beaucoup appris, et aujourd'hui, je vous donne l'opportunité de vivre vos rêves à fond. Bonne chance et succès ! N'oublie pas : nous sommes des gagnants.</p>
+    <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })">Voir mes services</button>
+  </section>
+
+  <section id="services">
+    <h2>Mes Services</h2>
+    <div class="service-container">
+      <div class="service">
+        <h3>Maintenance & support</h3>
+      </div>
+      <div class="service">
+        <h3>SEO & visibilité</h3>
+      </div>
+      <div class="service">
+        <h3>Développement web</h3>
+      </div>
+    </div>
+  </section>
+  <section id="about" style="padding: 60px 20px; background-color: #000; color: white;">
+    <h2 style="text-align: center; color: green; margin-bottom: 30px;">À propos de moi</h2>
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <img src="S.jpa" alt="Photo de Dario"
+           style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid green; margin-bottom: 20px;">
+      <p style="font-size: 16px; line-height: 1.6;">
+        Je suis <strong>DARIO</strong>, développeur web full stack passionné par la création de solutions modernes,
+        efficaces et inspirantes. J'ai appris le développement en autodidacte, en surmontant les obstacles
+        et en transformant les défis en opportunités.
+      </p>
+      <p style="font-size: 16px; line-height: 1.6;">
+        Mon objectif est simple : utiliser mes compétences pour aider ceux qui, comme moi, veulent réussir dans le numérique
+        sans forcément avoir les moyens traditionnels. Je crois au pouvoir de l’apprentissage, de la persévérance,
+        et surtout à notre capacité à transformer nos rêves en réalité.
+      </p>
+    </div>
+  </section>
+  <section id="portfolio" style="padding: 60px 20px; background-color: #000;">
+    <h2 style="text-align: center; color: green; margin-bottom: 30px;">Mes Projets</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+      <div style="background-color: #1e1e1e; padding: 20px; border-radius: 12px; width: 300px; text-align: center;">
+        <img src="S.jpf" alt="Projet 1" style="width: 100%; border-radius: 8px;">
+        <h3 style="color: white; margin-top: 15px;">Nom du Projet</h3>
+        <p style="color: #ccc;">Un projet de site web moderne avec HTML, CSS et JavaScript.</p>
+      </div>
+      <div style="background-color: #1e1e1e; padding: 20px; border-radius: 12px; width: 300px; text-align: center;">
+        <img src="S.jpg" alt="Projet 2" style="width: 100%; border-radius: 8px;">
+        <h3 style="color: white; margin-top: 15px;">Nom du Projet</h3>
+        <p style="color: #ccc;">Développement d’une plateforme responsive et performante.</p>
+      </div>
+      <!-- Ajoute d'autres projets si tu veux -->
+    </div>
+  </section>
+
+  <section id="contact" style="padding: 60px 20px; background-color: #111; color: white;">
+    <h2 style="text-align: center; color: green; margin-bottom: 30px;">Me Contacter</h2>
+    <form style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;" method="POST" action="https://formspree.io/f/maykdylk">
+      <input type="text" name="name" placeholder="Votre nom" required
+             style="padding: 10px; border-radius: 8px; border: none; outline: none;">
+      <input type="email" name="email" placeholder="Votre email" required
+             style="padding: 10px; border-radius: 8px; border: none; outline: none;">
+      <textarea name="message" placeholder="Votre message..." rows="5" required
+                style="padding: 10px; border-radius: 8px; border: none; outline: none;"></textarea>
+      <button type="submit" style="padding: 12px; background-color: green; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DARIOdev. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>￼Enter
